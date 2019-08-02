@@ -1,0 +1,22 @@
+{
+  "name": "lowdown-aterefe",
+  "version": "1.0.1",
+  "description": "my very first npm ",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "istanbul cover _mocha -- test/ -R spec"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aterefe/lodown.git"
+  },
+  "author": "Abel Terefe",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aterefe/lodown/issues"
+  },
+  "homepage": "https://github.com/aterefe/lodown#readme"
+}
