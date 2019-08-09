@@ -49,7 +49,7 @@ module.exports.typeOf = typeOf;
  * @param {Array} array: the array that contains the element
  * @param {Number} number: the number of element we want
  * 
- * @return {array}: return an array literal if elment not in array
+ * @return {array}: return an array literal if arguement is not in array
  * @return {element}: return first element of the array if number isn't given
  * @return {element}: return the number amount of element in the array. 
  */
@@ -74,7 +74,7 @@ module.exports.first = first;
  * @param {Array} array: the array that contains the elements
  * @param {Number} number: the number of element we want
  * 
- * @return {array}: return an array literal  
+ * @return {array}: return an array literal if arguement is not in array
  * @return {element}: return the last element of the array
  * @return {element}: return the number amount of element in the array. 
  */
@@ -100,7 +100,7 @@ module.exports.last = last;
  * exisit. 
  * @param {Value} value: the value we are trying to find in the array.
  * 
- * @return {index}: we are returning the index where the value we are looking 
+ * @return {index}: we are returning the index of where the value we are looking 
  * for in the array 
  */
 function indexOf (array, value){
@@ -157,7 +157,7 @@ module.exports.each = each;
 
 /**
  * unique: Designed to check for duplicates in the orginal array, and return a 
- * new array of the same element with no duplicates.
+ * new array with no duplicates.
  * 
  * @param {Array} array: the array we are itterating through to find the 
  * duplicate value.
@@ -178,7 +178,7 @@ module.exports.unique = unique;
 /**
  * filter: Designed to test each element in the array to the callback function 
  * given to filter. If it does pass the callback, then return a new array with 
- * the elements that pass the callback function given to filter.
+ * the elements that pass the callback function.
  * 
  * @param {Array} array: the array that contains the values we will us in the 
  * function paramater 
@@ -201,11 +201,11 @@ module.exports.filter = filter;
 /**
  * reject:  Designed to test each element in the array to the callback 
  * function given to reject. If it does fail the function, then return a new  
- * array with the elements that failed the callback function given to reject.
+ * array with the elements that failed the callback function.
  * 
  * @param {Array} array: the array that contains the values we will us to test 
  * in the function paramater 
- * @param {function} action: the function we will use to test what values if it 
+ * @param {function} test: the function we will use to test what values if it 
  * failed.
  * 
  * @return {Array}: an array of the values that failed the function paramter.
@@ -221,13 +221,13 @@ module.exports.filter = filter;
 /**
  * partition: Designed to combine both the return of filter and reject 
  * function into one array with two sub array as the element. The element at 
- * the first element is the one has all of the values that return true from 
+ * the first index is the one has all of the values that return true from 
  * the callback function and the second element contains all of the values that 
  * return false. 
  *  
  * @param {Array} array: the array that contains the values we will us to test 
  * in the function paramater 
- * @param {function} action: the function we will use to test what values if it 
+ * @param {function} test: the function we will use to test what values if it 
  * passed and failed.
  * 
  * @return {Array}: one array with two sub array as the element.
@@ -274,7 +274,7 @@ module.exports.map = map;
 
 /**
  * pluck: Designed to take an array of object, and create a new array with the 
- * values from the object as the elements.
+ * property from the object as the elements.
  * 
  * @param {Array} array: the array with objects as the element
  * @param {string} property: the key of each element
@@ -289,12 +289,13 @@ module.exports.map = map;
 module.exports.pluck = pluck; 
 
 /**
- * every: Designed return true if every element in the array passed in the 
- * function parameter. If one element in the array fails then it'll return false.
+ * every: Designed to return true if every element in the array passed the test 
+ * defined by the function parameter. If one element in the array fails then 
+ * it'll return false.
  * 
  * @param {Array} collect: is the array that contains the element that will be 
  * tested in the function
- * @param {function} test: the function that every element in the array will go 
+ * @param {Function} test: the function that every element in the array will go 
  * through
  * 
  * @return {Boolean}: return true if every element pass the function and false
@@ -320,13 +321,13 @@ function every (collect, test){
 module.exports.every = every; 
 
 /**
- * some: Designed to return a true or false if at leat one element in the array 
- * passes the callback function. If all the element in the array fails then 
- * it'll return false.
+ * some: Designed to return true if at leat one element in the array 
+ * passes the callback function. If all the element in the array, passed through
+ * to the callback function returns false then it'll return false.
  * 
  * @param {Array} collect: is the array that contains the element that will be 
  * tested in the function
- * @param {function} test: the function that every element in the array will go 
+ * @param {function}: the function that every element in the array will go 
  * through
  * 
  * @return {Boolean}: return true if some element pass the function and false
@@ -353,13 +354,13 @@ function some(collect, test){
 module.exports.some = some;
 
 /**
- * reduce: Designed to use a callback function on each element in the array then 
- * boils down into a one element in the array.
+ * reduce: Designed to use a callback function as you iterate you are 
+ * reducing the array down to one value.
  * 
  * @param {array} array: the array we itterate through to acces the element
  * @param {function} test: the function that each elment goes through to turn
  * the each element into one elment 
- * @seed {Any datatype} seed: A variable that is assigned to any value that is 
+ * @param {Any datatype} seed: A variable that is assigned to any value that is 
  * given, and if it is not given then it'll be the first element of the array.
  * 
  * @return {Array}: returns a new array with one element of each of the element 
@@ -381,7 +382,8 @@ module.exports.reduce = reduce;
 
 
 /**
- * extend: Designed to combine two or more sperate object into one object.
+ * extend: Designed to transfer properties from two or more sperate object into
+ * one object.
  * 
  * @param {object} obj1: the first object with properties 
  * @param {object} obj2: the second object with properties
