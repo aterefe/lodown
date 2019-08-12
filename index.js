@@ -49,7 +49,8 @@ module.exports.typeOf = typeOf;
  * @param {Array} array: the array that contains the element
  * @param {Number} number: the number of element we want
  * 
- * @return {array}: return an array literal if arguement is not in array
+ * @return {array}: return an array literal if the first arguement is not an 
+ * array
  * @return {element}: return first element of the array if number isn't given
  * @return {element}: return the number amount of element in the array. 
  */
@@ -74,7 +75,8 @@ module.exports.first = first;
  * @param {Array} array: the array that contains the elements
  * @param {Number} number: the number of element we want
  * 
- * @return {array}: return an array literal if arguement is not in array
+ * @return {array}: return an array literal if the first arguement is not an 
+ * array
  * @return {element}: return the last element of the array
  * @return {element}: return the number amount of element in the array. 
  */
@@ -100,7 +102,7 @@ module.exports.last = last;
  * exisit. 
  * @param {Value} value: the value we are trying to find in the array.
  * 
- * @return {index}: we are returning the index of where the value we are looking 
+ * @return {index}: we are returning the index of the value we are looking 
  * for in the array 
  */
 function indexOf (array, value){
@@ -177,7 +179,7 @@ module.exports.unique = unique;
 
 /**
  * filter: Designed to test each element in the array to the callback function 
- * given to filter. If it does pass the callback, then return a new array with 
+ * parameter. If it does pass the callback, then return a new array with 
  * the elements that pass the callback function.
  * 
  * @param {Array} array: the array that contains the values we will us in the 
@@ -200,7 +202,7 @@ module.exports.filter = filter;
 
 /**
  * reject:  Designed to test each element in the array to the callback 
- * function given to reject. If it does fail the function, then return a new  
+ * function parameter. If it does fail the function, then return a new  
  * array with the elements that failed the callback function.
  * 
  * @param {Array} array: the array that contains the values we will us to test 
@@ -221,9 +223,8 @@ module.exports.filter = filter;
 /**
  * partition: Designed to combine both the return of filter and reject 
  * function into one array with two sub array as the element. The element at 
- * the first index is the one has all of the values that return true from 
- * the callback function and the second element contains all of the values that 
- * return false. 
+ * the first index has all of the values that return true from the callback 
+ * function and the second element contains all of the values that return false. 
  *  
  * @param {Array} array: the array that contains the values we will us to test 
  * in the function paramater 
@@ -277,7 +278,8 @@ module.exports.map = map;
  * property from the object as the elements.
  * 
  * @param {Array} array: the array with objects as the element
- * @param {string} property: the key of each element
+ * @param {string} property: the key of each element. We are using it to access
+ * the value in each element
  * 
  * @return {Array}: an array of the values in each element
  */
@@ -290,8 +292,8 @@ module.exports.pluck = pluck;
 
 /**
  * every: Designed to return true if every element in the array passed the test 
- * defined by the function parameter. If one element in the array fails then 
- * it'll return false.
+ * defined by the function parameter. If all the element in the array fails then 
+ *return false.
  * 
  * @param {Array} collect: is the array that contains the element that will be 
  * tested in the function
@@ -382,8 +384,8 @@ module.exports.reduce = reduce;
 
 
 /**
- * extend: Designed to transfer properties from two or more sperate object into
- * one object.
+ * extend: Designed to transfer properties from two or more sperate object/s
+ * into one object.
  * 
  * @param {object} obj1: the first object with properties 
  * @param {object} obj2: the second object with properties
