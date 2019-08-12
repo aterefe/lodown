@@ -5,7 +5,7 @@
 /**
  * identity: Designed to return value.
  * 
- * @param {Any value} values: a data type you are trying to return.
+ * @param  {Any value} values: a data type you are trying to return.
  * @return {Any value}: Returns any given value.
  */
 function identity (values) {
