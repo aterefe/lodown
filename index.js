@@ -44,7 +44,7 @@ module.exports.typeOf = typeOf;
 /**
  * first: Designed to take in an array and a number and returns a given number 
  * of element. Lastly, if the number is not given it'll return the first element. 
- * Also, if an array literal if the first arguement is not an array.
+ * Returns an array literal if the first arguement is not an array.
  * 
  * @param {Array} array: the array that contains the element
  * @param {Number} number: the number of element we want
@@ -68,7 +68,7 @@ module.exports.first = first;
 /**
  * last: Designed to take in an array and a number and returns a given number 
  * of the last elements. Lastly, if the number is not given it'll return the 
- * last element. Also, an array literal if the first arguement is not an array.
+ * last element. Returns an array literal if the first arguement is not an array.
  * 
  * @param {Array} array: the array that contains the elements
  * @param {Number} number: the number of element we want
@@ -92,11 +92,10 @@ function last(array, number){
 module.exports.last = last;
 
 /**
- * indexOf: Designed to check what index does the value first appear in the 
- * array, and if the value is does not exisit in the array, then we'll retrun -1
+ * indexOf: Designed to return the index of the value we are looking for, 
+ * and if the value does not exisit in the array, then we'll retrun -1
  * 
- * @param {Array} array: this the array we are looking to see where the property
- * exisit. 
+ * @param {Array} array: the array that is given  
  * @param {Value} value: the value we are trying to find in the array.
  * 
  * @return {index}: we are returning the index of the value we are looking 
