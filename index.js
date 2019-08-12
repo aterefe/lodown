@@ -44,13 +44,12 @@ module.exports.typeOf = typeOf;
 /**
  * first: Designed to take in an array and a number and returns a given number 
  * of element. Lastly, if the number is not given it'll return the first element. 
- * Also, if an element is not in the array then it'll return an array literal.
+ * Also, if an array literal if the first arguement is not an array.
  * 
  * @param {Array} array: the array that contains the element
  * @param {Number} number: the number of element we want
  * 
- * @return {array}: return an array literal if the first arguement is not an 
- * array
+ * @return {array}: an array literal if the first arguement is not an array
  * @return {element}: return first element of the array if number isn't given
  * @return {element}: return the number amount of element in the array. 
  */
@@ -69,14 +68,12 @@ module.exports.first = first;
 /**
  * last: Designed to take in an array and a number and returns a given number 
  * of the last elements. Lastly, if the number is not given it'll return the 
- * last element. Also, if an element is not in the array then it'll return an 
- * array literal.
+ * last element. Also, an array literal if the first arguement is not an array.
  * 
  * @param {Array} array: the array that contains the elements
  * @param {Number} number: the number of element we want
  * 
- * @return {array}: return an array literal if the first arguement is not an 
- * array
+ * @return {array}:an array literal if the first arguement is not an array
  * @return {element}: return the last element of the array
  * @return {element}: return the number amount of element in the array. 
  */
@@ -98,7 +95,7 @@ module.exports.last = last;
  * indexOf: Designed to check what index does the value first appear in the 
  * array, and if the value is does not exisit in the array, then we'll retrun -1
  * 
- * @param {Array} array: this the array we are checking to see where the value
+ * @param {Array} array: this the array we are looking to see where the property
  * exisit. 
  * @param {Value} value: the value we are trying to find in the array.
  * 
